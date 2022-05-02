@@ -20,7 +20,7 @@ describe("add multiple items to basket", () => {
     autoStore_HomePage_PO.clickOn_HairCare_Link();
   });
 
-  it("add specific items to basket", () => {
+  it("add specific items to  the basket", () => {
     // globalThis.data.productName.forEach(function (element) {
     //   cy.addProductToBasket(element);
     // });
