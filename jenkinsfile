@@ -1,14 +1,12 @@
 pipeline {
     agent any
 
-    tools {nodejs, "node"}
+    tools {nodejs "node"}
 
     stages {
-
         stage('Cypress Parallel Test Suite') {
-            Parallel {
-
-                stage('Slave Node1'){
+            parallel {
+                stage('Slave Node1') {
                     agent {
                         label "remote_node1"
                     }
@@ -16,9 +14,10 @@ pipeline {
                         git url: 'https://github.com/mishrajiji/cypress-uatomation-framework.git'
                         sh 'npm install'
                         sh 'npm update'
-                        sh 'npm run webdriveruni'
+                        sh 'npm run webdriverun'
                     }
-                stage('Slave Node2'){
+                }
+                stage('Slave Node2') {
                     agent {
                         label "remote_node2"
                     }
@@ -26,13 +25,10 @@ pipeline {
                         git url: 'https://github.com/mishrajiji/cypress-uatomation-framework.git'
                         sh 'npm install'
                         sh 'npm update'
-                        sh 'npm run webdriveruni'
+                        sh 'npm run webdriverun'
                     }
-
-
                 }
             }
-
         }
     }
 }
