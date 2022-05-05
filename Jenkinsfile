@@ -14,7 +14,7 @@ pipeline {
                         git url: 'https://github.com/mishrajiji/cypress-uatomation-framework.git'
                         sh 'npm install'
                         sh 'npm update'
-                        sh 'npm run webdriverun'
+                        sh 'npm run webdriveruni'
                     }
                 }
                 stage('Slave Node2') {
@@ -25,7 +25,7 @@ pipeline {
                         git url: 'https://github.com/mishrajiji/cypress-uatomation-framework.git'
                         sh 'npm install'
                         sh 'npm update'
-                        sh 'npm run webdriverun'
+                        sh 'npm run webdriveruni'
                     }
                 }
             }
