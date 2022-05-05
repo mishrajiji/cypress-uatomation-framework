@@ -64,7 +64,7 @@ describe("test group contact us form", () => {
       data.email,
       "no comments",
       "h1",
-      "Thank You for your Message!2"
+      "Thank You for your Message!"
     );
 
     //should
